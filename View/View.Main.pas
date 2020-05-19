@@ -22,8 +22,8 @@ type
     buttonExpressas: TcxButton;
     actionExpressas: TAction;
     popupMenuExpressas: TPopupMenu;
-    dctionImportacaoPedidos: TAction;
-    actionImportacaoBaixas: TAction;
+    actionExpressasImportacaoPedidos: TAction;
+    actionExpressasImportacaoBaixas: TAction;
     menuExpressasImportaodePedidos: TMenuItem;
     menuExpressasImportaodeBaixas: TMenuItem;
     buttonPeriodico: TcxButton;
@@ -80,6 +80,58 @@ type
     menuExpressasExtratos: TMenuItem;
     menuExpressasVerbas: TMenuItem;
     N5: TMenuItem;
+    popupMenuPeriodicos: TPopupMenu;
+    actionPeriodicosImportacaoTiragem: TAction;
+    actionPeriodicosImportacaoEtiquetas: TAction;
+    actionPeriodicosOcorrencias: TAction;
+    actionPeriodicosRecados: TAction;
+    actionPeriodicosAtribuicao: TAction;
+    actionServicosCadastroServicos: TAction;
+    actionServicosOS: TAction;
+    popupMenuServicos: TPopupMenu;
+    actionTransportesViagens: TAction;
+    actionTransportesManutencao: TAction;
+    actionTransportesInsumos: TAction;
+    actionTransportesAbastecimentos: TAction;
+    actionTransportesEstoquesInsumos: TAction;
+    actionFinanceiroCentroCusto: TAction;
+    actionFinanceiroCreditoDebito: TAction;
+    actionFinanceiroContasReceber: TAction;
+    actionFinanceiroContasPagar: TAction;
+    actionFinanceiroCaixaPequeno: TAction;
+    actionFinanceiroPlanilhaFinanceira: TAction;
+    actionSistemaUsuarios: TAction;
+    actionSistemaSenha: TAction;
+    menuAtribuicoes: TMenuItem;
+    menuEtiquetas: TMenuItem;
+    menuTiragem: TMenuItem;
+    menuOcorrencias: TMenuItem;
+    menuRecados: TMenuItem;
+    N6: TMenuItem;
+    N7: TMenuItem;
+    menuServios: TMenuItem;
+    menuOrdensdeServios: TMenuItem;
+    popupMenuTransportes: TPopupMenu;
+    menuViagens: TMenuItem;
+    menuManutencao: TMenuItem;
+    menuEstoques: TMenuItem;
+    menuAbastecimentos: TMenuItem;
+    menuInsumos: TMenuItem;
+    N8: TMenuItem;
+    N9: TMenuItem;
+    popupMenuFinanceiro: TPopupMenu;
+    menuCentrodeCusto: TMenuItem;
+    menuContasaPagar: TMenuItem;
+    menuContasaReceber: TMenuItem;
+    menuCaixaPequeno: TMenuItem;
+    menuCreditoseDebitos: TMenuItem;
+    menuPlanilhadeFinanceira: TMenuItem;
+    N10: TMenuItem;
+    N11: TMenuItem;
+    popupMenuSistema: TPopupMenu;
+    menuUsurios: TMenuItem;
+    menuSenha: TMenuItem;
+    N12: TMenuItem;
     procedure FormShow(Sender: TObject);
     procedure actionMenuExecute(Sender: TObject);
     procedure actionCadastroExecute(Sender: TObject);
@@ -87,10 +139,17 @@ type
     procedure actionSairExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure actionPeriodicosExecute(Sender: TObject);
+    procedure actionServicosExecute(Sender: TObject);
+    procedure actionTransporteExecute(Sender: TObject);
+    procedure actionFinanceiroExecute(Sender: TObject);
+    procedure actionSistemaExecute(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
     procedure ResizeMainForm;
     procedure OpenCloseMenu;
+    function Login(): Boolean;
   public
     { Public declarations }
   end;
@@ -102,7 +161,7 @@ implementation
 
 {$R *.dfm}
 
-uses Data.Module;
+uses Data.Module, View.Login;
 
 { Tview_Main }
 
@@ -116,14 +175,44 @@ begin
   popupMenuExpressas.Popup(splitViewMain.Width, buttonMenu.Height * 3);
 end;
 
+procedure Tview_Main.actionFinanceiroExecute(Sender: TObject);
+begin
+  popupMenuFinanceiro.Popup(splitViewMain.Width, buttonMenu.Height * 7);
+end;
+
 procedure Tview_Main.actionMenuExecute(Sender: TObject);
 begin
   OpenCloseMenu;
 end;
 
+procedure Tview_Main.actionPeriodicosExecute(Sender: TObject);
+begin
+  popupMenuPeriodicos.Popup(splitViewMain.Width, buttonMenu.Height * 4);
+end;
+
 procedure Tview_Main.actionSairExecute(Sender: TObject);
 begin
   Close;
+end;
+
+procedure Tview_Main.actionServicosExecute(Sender: TObject);
+begin
+  popupMenuServicos.Popup(splitViewMain.Width, buttonMenu.Height * 5);
+end;
+
+procedure Tview_Main.actionSistemaExecute(Sender: TObject);
+begin
+  popupMenuSistema.Popup(splitViewMain.Width, buttonMenu.Height * 8);
+end;
+
+procedure Tview_Main.actionTransporteExecute(Sender: TObject);
+begin
+  popupMenuTransportes.Popup(splitViewMain.Width, buttonMenu.Height * 6);
+end;
+
+procedure Tview_Main.FormActivate(Sender: TObject);
+begin
+  if not Login() then Application.Terminate;
 end;
 
 procedure Tview_Main.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -140,6 +229,20 @@ end;
 procedure Tview_Main.FormShow(Sender: TObject);
 begin
   ResizeMainForm;
+end;
+
+function Tview_Main.Login: Boolean;
+begin
+  Result := False;
+  if not Assigned(view_Login) then
+  begin
+    view_Login := Tview_Login.Create(Application);
+  end;
+  if view_Login.ShowModal = mrOk Then
+  begin
+    Result := True;
+  end;
+  FreeAndNil(view_Login);
 end;
 
 procedure Tview_Main.OpenCloseMenu;

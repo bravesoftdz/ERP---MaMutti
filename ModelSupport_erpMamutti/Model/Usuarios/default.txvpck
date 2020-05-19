@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="i2e56583nqqaw82ot_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:erpMamutti:Model.Usuarios.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:erpMamutti:Model.Usuarios.TUsuarios">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="260,100,118,343" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Codigo" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FCodigo" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetCodigo(System.Integer)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Nome" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FNome" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetNome(System.string)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.UserName" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FUserName" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetUserName(System.string)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.EMail" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FEMail" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetEMail(System.string)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Senha" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FSenha" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetSenha(System.string)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Property1" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FProperty1" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetProperty1(System.Integer)" />
+    </reference>
+  </view>
+</nodeSet>
