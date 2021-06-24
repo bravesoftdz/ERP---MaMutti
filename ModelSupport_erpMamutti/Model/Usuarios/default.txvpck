@@ -9,7 +9,10 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:erpMamutti:Model.Usuarios.TUsuarios">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="260,100,118,343" />
+      <property name="bounds" value="60,20,121,309" />
+      <property name="hideAttribute" value="True" />
+      <property name="hideOperation" value="False" />
+      <property name="hideProperty" value="True" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Codigo" />
       <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FCodigo" />
@@ -26,9 +29,37 @@
       <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Senha" />
       <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FSenha" />
       <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetSenha(System.string)" />
-      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Property1" />
-      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FProperty1" />
-      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetProperty1(System.Integer)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Grupo" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FGrupo" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetGrupo(System.Integer)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Privilegio" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FPrivilegio" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetPrivilegio(System.string)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.ExpiraSenha" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FExpiraSenha" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetExpiraSenha(System.string)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.DiasExpira" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FDiasExpira" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetDiasExpira(System.Integer)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.PrimeiroAcesso" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FPrimeiroAcesso" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetPrimeiroAcesso(System.string)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Ativo" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FAtivo" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetAtivo(System.string)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.DataSenha" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FDataSenha" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetDataSenha(System.TDate)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Nivel" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FNivel" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetNivel(System.Integer)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Executor" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FExecutor" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetExecutor(System.string)" />
+      <reference referencedUin="delphi:e_property:src:erpMamutti:Model.Usuarios.TUsuarios.Manutencao" />
+      <reference referencedUin="delphi:e_field:src:erpMamutti:Model.Usuarios.TUsuarios.FManutencao" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.SetManutencao(System.TDateTime)" />
+      <reference referencedUin="delphi:e_method:src:erpMamutti:Model.Usuarios.TUsuarios.Query()" />
     </reference>
   </view>
 </nodeSet>

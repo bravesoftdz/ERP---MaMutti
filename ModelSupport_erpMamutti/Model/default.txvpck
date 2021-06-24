@@ -4,5 +4,13 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="design:view:::i2e56583nqqaw82ot_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="220,100,104,151" />
+      <property name="hideModule" value="False" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_class:src:erpMamutti:Model.Usuarios.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:erpMamutti:Model.Usuarios.TUsuarios" />
+    </reference>
   </view>
 </nodeSet>

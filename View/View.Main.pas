@@ -31,7 +31,7 @@ type
     actionServicos: TAction;
     actionTransporte: TAction;
     actionFinanceiro: TAction;
-    actionSistema: TAction;
+    actionConfiguracoes: TAction;
     actionSair: TAction;
     buttonServicos: TcxButton;
     buttonTransportes: TcxButton;
@@ -143,7 +143,7 @@ type
     procedure actionServicosExecute(Sender: TObject);
     procedure actionTransporteExecute(Sender: TObject);
     procedure actionFinanceiroExecute(Sender: TObject);
-    procedure actionSistemaExecute(Sender: TObject);
+    procedure actionConfiguracoesExecute(Sender: TObject);
     procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
@@ -200,7 +200,7 @@ begin
   popupMenuServicos.Popup(splitViewMain.Width, buttonMenu.Height * 5);
 end;
 
-procedure Tview_Main.actionSistemaExecute(Sender: TObject);
+procedure Tview_Main.actionConfiguracoesExecute(Sender: TObject);
 begin
   popupMenuSistema.Popup(splitViewMain.Width, buttonMenu.Height * 8);
 end;
@@ -212,7 +212,7 @@ end;
 
 procedure Tview_Main.FormActivate(Sender: TObject);
 begin
-  if not Login() then Application.Terminate;
+//  if not Login() then Application.Terminate;
 end;
 
 procedure Tview_Main.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -250,17 +250,19 @@ begin
   if splitViewMain.Opened then
   begin
     splitViewMain.Close;
+    actionMenu.ImageIndex := 0;
   end
   else
   begin
     splitViewMain.Open;
+    actionMenu.ImageIndex := 9;
   end;
 end;
 
 procedure Tview_Main.ResizeMainForm;
 begin
-  Self.Top := Screen.WorkAreaTop;
-  Self.Left := Screen.WorkAreaLeft;
+  Self.Top := 0;
+  Self.Left := 0;
   Self.Width := Screen.WorkAreaWidth;
   Self.Height := Screen.WorkAreaHeight;
   Self.Caption := Application.Title;
