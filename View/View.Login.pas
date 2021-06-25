@@ -25,8 +25,10 @@ type
     dxLayoutItem2: TdxLayoutItem;
     dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup;
     procedure actionLoginCancelarExecute(Sender: TObject);
+    procedure actionLoginLogarExecute(Sender: TObject);
   private
     { Private declarations }
+    function Logar(): boolean;
   public
     { Public declarations }
   end;
@@ -43,7 +45,27 @@ uses Data.Module;
 procedure Tview_Login.actionLoginCancelarExecute(Sender: TObject);
 begin
   ModalResult := mrCancel;
-  view_Login.Close;
+  //view_Login.Close;
+end;
+
+procedure Tview_Login.actionLoginLogarExecute(Sender: TObject);
+begin
+  if Logar() then
+    ModalResult := mrOk
+  else
+    ModalResult := mrCancel;
+end;
+
+function Tview_Login.Logar: boolean;
+begin
+  Result := False;
+  with dm do
+  begin
+    FDConnectionMySQL.Params.UserName := textEditUsuario.Text;
+    FDConnectionMySQL.Params.Password := textEditSenha.Text;
+    FDConnectionMySQL.Connected := True;
+  end;
+  Result := True;
 end;
 
 end.

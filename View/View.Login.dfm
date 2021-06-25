@@ -148,6 +148,7 @@ object view_Login: Tview_Login
       Caption = 'Logar'
       Hint = 'Logar no sistema'
       ImageIndex = 0
+      OnExecute = actionLoginLogarExecute
     end
     object actionLoginCancelar: TAction
       Category = 'Login'

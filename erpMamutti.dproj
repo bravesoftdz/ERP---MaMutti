@@ -115,14 +115,15 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="View\View.Login.pas">
-            <Form>view_Login</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="Model\Model.Usuarios.pas"/>
         <DCCReference Include="DAO\DAO.Conexao.pas"/>
         <DCCReference Include="Common\Common.ENum.pas"/>
         <DCCReference Include="Global\Global.Parametros.pas"/>
+        <DCCReference Include="Controller\Controller.Usuarios.pas"/>
+        <DCCReference Include="View\View.Login.pas">
+            <Form>view_Login</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="ModelSupport_erpMamutti\default.txaPackage"/>
         <None Include="ModelSupport_erpMamutti\default.txvpck"/>
         <None Include="ModelSupport_erpMamutti\erpMamutti\default.txvpck"/>

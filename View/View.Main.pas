@@ -229,6 +229,8 @@ end;
 procedure Tview_Main.FormShow(Sender: TObject);
 begin
   ResizeMainForm;
+  if not Login() then
+    Application.Terminate;
 end;
 
 function Tview_Main.Login: Boolean;

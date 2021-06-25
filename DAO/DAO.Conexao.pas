@@ -59,8 +59,8 @@ begin
                             ';Server=' + Global.Parametros.pServer +
                             ';Database=' + Global.Parametros.pDatabase +
                             ';Port=' + Global.Parametros.pPort +
-                            ';User_name=' + ''+
-                            ';Password=' + '';
+                            ';User_name=' + Global.Parametros.pUser_Name+
+                            ';Password=' + Global.Parametros.pPassword;
 end;
 
 end.
